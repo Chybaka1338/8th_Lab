@@ -15,27 +15,20 @@ namespace _8th_Lab
         {
             Console.WriteLine("введите текст");
             text = Console.ReadLine().ToLower();
-            SetTotalLetters();
             SetStatistic();
             PrintStatistic();
             Console.WriteLine();
         }
 
-        static void SetTotalLetters()
+        static void SetStatistic()
         {
+            dict = new Dictionary<Char, int>();
             total = 0;
             for(int i = 0; i < text.Length; i++)
             {
                 if (Char.IsLetter(text[i]))
                     total++;
-            }
-        }
 
-        static void SetStatistic()
-        {
-            dict = new Dictionary<Char, int>();
-            for(int i = 0; i < text.Length; i++)
-            {
                 if (text[i] >= 0x0430 && text[i] <= 0x044F)
                 {
                     if (!dict.ContainsKey(text[i]))
