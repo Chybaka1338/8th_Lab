@@ -7,13 +7,9 @@ namespace _8th_Lab
     {
         static void Main(string[] args)
         {
-            Task1.Run();
+            //Task1.Run();
+            Task11.Run();
             Console.ReadKey();
-        }
-
-        static void Task2()
-        {
-
         }
     }
 }
